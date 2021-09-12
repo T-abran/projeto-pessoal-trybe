@@ -1,12 +1,21 @@
-function colorPallet(){
-    const palleta = document.querySelectorAll('.color');
-    let cores = ['black', 'green','yellow', 'magenta','red', 'pink', 'darkblue', 'brow', 'salmon'];
-   
-    for(let i=0; i < palleta.length; i+=1 ){
-        let rnd = Math.floor(math.randon()* cores.length);
+function colorPallete(){
+    const palleta = document.querySelectorAll(".color");
+    console.log('paleta'+ palleta);
+    let cores = ['black', 'green','yellow', 'magenta'];
+   console.log('cores ' + cores);
+   console.log(cores.length);
+    for(let i = 0; i < palleta.length; i += 1 ) {
+    //numero aleatorio
+    let rnd = Math.random(0,cores.length) *10;
+    rnd = Math.round(rnd)
+    console.log('rnd ' + rnd);
+    // rnd definida e fixa ate o fim dessa parte do for
+    palleta[i].style.backgroundColor = cores[rnd];
+    cores.slice(rnd, 1);
+    console.log(cores);
     }
 }
-function selecionar(origem){
+/* function selecionar(origem){
     const palleta= document.querySelectorAll(".color");
     for (let i =0; i < palleta.length; i +=1){
         palleta[i].classList.remove('selected');
@@ -29,3 +38,8 @@ function adicionarEventos() {
         
     }
 }
+function name(params) {
+    
+} */
+
+colorPallete();
