@@ -1,7 +1,7 @@
 function colorPallete(){
     const palleta = document.querySelectorAll(".color");
     console.log('paleta'+ palleta);
-    let cores = ['black', 'green','yellow', 'magenta'];
+    let cores = ['black', 'green','yellow', 'magenta','red','blue','pink']
    console.log('cores ' + cores);
    console.log(cores.length);
     for(let i = 1; i < palleta.length; i += 1 ) {
@@ -15,7 +15,13 @@ function colorPallete(){
     console.log(cores);
     }
 }
-/* function selecionar(origem){
+function limparQuadro() {
+    const pixeis = document.querySelectorAll(".pixel");
+    for ( let i = o; i < pixeis.length; i += 1){
+        pixeis[i].style.backgroundColor = "rgb(255, 255, 255)";
+    }
+}
+ function selecionar(origem){
     const palleta= document.querySelectorAll(".color");
     for (let i =0; i < palleta.length; i +=1){
         palleta[i].classList.remove('selected');
@@ -30,16 +36,19 @@ function pintarPixel(origem) {
 function adicionarEventos() {
     const palleta = Document.querySelectorAll('.color');
     const pixeis = document.querySelectorAll('.pixel');
+    const button = document.querySelector("#generate-board");
+
     for (let i = 0; i < palleta.length; i+=1) {
         palleta[i].addEventListener('click',selecionar);
     }
-    for (let i = 0; i < pixeis.length; i++) {
-        const element = array[i];
+
+    for (let i = 0; i < pixeis.length; i += 1) {
+       pixeis[i].addEventListener('click', pintarPixel);
         
     }
 }
-function name(params) {
-    
-} */
-
 colorPallete();
+adicionarEventos();
+limparQuadro();
+pintarPixel();
+selecionar();

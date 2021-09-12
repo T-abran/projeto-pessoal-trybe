@@ -9,3 +9,9 @@
 main div {
   display: inline-block;
 }
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  list-style-type: none;
+}
