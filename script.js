@@ -4,7 +4,7 @@ function colorPallete(){
     let cores = ['black', 'green','yellow', 'magenta'];
    console.log('cores ' + cores);
    console.log(cores.length);
-    for(let i = 0; i < palleta.length; i += 1 ) {
+    for(let i = 1; i < palleta.length; i += 1 ) {
     //numero aleatorio
     let rnd = Math.random(0,cores.length) *10;
     rnd = Math.round(rnd)
