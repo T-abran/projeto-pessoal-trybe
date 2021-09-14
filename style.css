@@ -2,19 +2,27 @@
     background-color: blue;
     border: solid 1px black;
     display: inline-block;
+    width: 30px;
+    height: 30px;
 }
 #pink {
     background-color: pink;
     border: solid  1px black;
-    display: inline-block
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
-#red {
-    background-color: red;
+#black{
+    background-color: black;
     border: solid  1px black;
-    display: inline-block
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
 #yellow {
     background-color: yellow;
     border: solid  1px black;
-    display: inline-block
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
