@@ -32,14 +32,28 @@ function adicionarEventos() {
       pixel[index].addEventListener('click', pintar);
  }
 }
-
-
 document.getElementById('yellow').style.backgroundColor = 'yellow';
 document.getElementById('black').style.backgroundColor = 'black';
 document.getElementById('pink').style.backgroundColor = 'pink';
 document.getElementById('blue').style.backgroundColor = 'blue';
-   
+
+let botao = document.createElement('button');
+botao.id = 'clear-board';
+botao.innerText = 'Limpar';
+document.getElementById('meio').appendChild(botao);
+
+function apagar() {
+let pixeis = document.querySelectorAll('.pixel');
+   for(let index = 0; index < pixeis.length; index += 1){
+    pixeis[index].style.backgroundColor = 'white'
+   }
+}
+botao.addEventListener('click', apagar)
+
+
+
 window.onload =()=>{
-  pegaSelecionar()
+  apagar();
+  pegaSelecionar();
   adicionarEventos();
 }
