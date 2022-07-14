@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: rgb(218, 245, 245);
 }
+
 #black {
   border: solid  1px black;
   display: inline-block;
@@ -16,7 +18,7 @@
   height: 30px;
 }
 
-#pink {
+#red {
   border: solid  1px black;
   display: inline-block;
   width: 30px;
@@ -33,26 +35,36 @@
 .pixel {
   border: solid 1px black;
   display: inline-block;
-  background-color: white;
-  width: 40px;
-  height: 40px;
+  background-color: rgb(255, 253, 253);
+  width: 25px;
+  height: 25px;
 }
+
 #pixel-board {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#color-palette{
+
+#color-palette {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-
 }
-#title{
-  margin:0;
-  padding: 0%;
-  background-color: rgb(122, 100, 2323);
-}
-#clear-board{
 
+#title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(121, 157, 242);
+}
+
+#clear {
+  background-color: rgb(121, 157, 242);
+}
+
+#meio {
+  display: flex;
+  justify-content: center;
+  margin: 3px;
 }

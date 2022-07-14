@@ -4,56 +4,53 @@ function selecionar(evento) {
 }
 const color = document.querySelectorAll('#color-palette .color');
 
+// eslint-disable-next-line no-unused-vars
 function adicionarClasse() {
   for (let index = 0; index < color.length; index += 1) {
     color[index].addEventListener('click', selecionar);
   }
 }
 
-
-function pintar(origem) {
+function pintar(event) {
   const corSelected = document.querySelector('.selected').style.backgroundColor;
-  origem.target.style.backgroundColor = corSelected;
+  // eslint-disable-next-line no-param-reassign
+  event.target.style.backgroundColor = corSelected;
 }
-function pegaSelecionar() {
 
+function pegaSelecionar() {
   const palleta = document.querySelectorAll('.color');
 
-  for (let index = 0; index < palleta.length; index += 1){
+  for (let index = 0; index < palleta.length; index += 1) {
     palleta[index].addEventListener('click', selecionar);
-}
+  }
 }
 function adicionarEventos() {
- 
   const pixel = document.querySelectorAll('.pixel');
 
-
-  for (let index = 0; index < pixel.length; index += 1){
-      pixel[index].addEventListener('click', pintar);
- }
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].addEventListener('click', pintar);
+  }
 }
-document.getElementById('yellow').style.backgroundColor = 'yellow';
+document.getElementById('yellow').style.backgroundColor = 'gray';
 document.getElementById('black').style.backgroundColor = 'black';
-document.getElementById('pink').style.backgroundColor = 'pink';
-document.getElementById('blue').style.backgroundColor = 'blue';
+document.getElementById('red').style.backgroundColor = 'red';
+document.getElementById('blue').style.backgroundColor = 'white';
 
-let botao = document.createElement('button');
-botao.id = 'clear-board';
+const botao = document.createElement('button');
+botao.id = 'clear';
 botao.innerText = 'Limpar';
 document.getElementById('meio').appendChild(botao);
 
 function apagar() {
-let pixeis = document.querySelectorAll('.pixel');
-   for(let index = 0; index < pixeis.length; index += 1){
-    pixeis[index].style.backgroundColor = 'white'
-   }
+  const pixeis = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixeis.length; index += 1) {
+    pixeis[index].style.backgroundColor = 'white';
+  }
 }
-botao.addEventListener('click', apagar)
+botao.addEventListener('click', apagar);
 
-
-
-window.onload =()=>{
+window.onload = () => {
   apagar();
   pegaSelecionar();
   adicionarEventos();
-}
+};
