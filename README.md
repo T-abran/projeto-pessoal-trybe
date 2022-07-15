@@ -6,4 +6,4 @@
  -  😮 Ele consiste em ser uma página web que contém uma paleta de cores funcional que poderá ser utilizada para criar desenhos em pixels. 
 
  <h3 align="left"> Foto do Projeto </h3>
- <img src="pokedex.png" alt="foto do projeto" />
+ <img src="./images/pokedex.png" alt="foto do projeto" />
